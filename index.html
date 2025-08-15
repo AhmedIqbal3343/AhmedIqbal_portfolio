@@ -1145,16 +1145,53 @@
   .timeline-content {
     padding: 1.5rem;
   }
+}
 
-  /* Contact Section */
+  /* Add this to your existing CSS */
+@media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
   
-  .contact-info,
+  .contact-info {
+    width: 100%;
+    margin: 0;
+    padding: 2rem 1.5rem;
+    border-radius: 0;
+    box-sizing: border-box;
+  }
+  
   .contact-form {
-    padding: 1.5rem;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .contact-item {
+    padding: 1rem;
+  }
+  
+  .contact-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .contact-info, 
+  .contact-form {
+    padding: 1.5rem 1rem;
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-icon {
+    margin-bottom: 1rem;
   }
 }
 

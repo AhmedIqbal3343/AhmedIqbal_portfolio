@@ -136,21 +136,471 @@
             z-index: 999;
         }
 
+        /* Certifications Section */
+.certifications {
+    background: linear-gradient(135deg, var(--dark-light) 0%, var(--gray-900) 100%);
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.certification-card {
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.certification-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.certification-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+}
+
+.cert-logo {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 5px; /* This creates the border space */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cert-logo img {
+    width: 80%; /* Logo takes 80% of container */
+    height: 80%;
+    object-fit: contain;
+    border-radius: 50%;
+    background: white; /* Optional: adds white background to logos */
+    padding: 2px; /* Optional: adds small padding inside logo */
+}
+
+/* Adjust header alignment */
+.cert-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .cert-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .cert-header {
+        flex-direction: row; /* Keep horizontal layout on mobile */
+        align-items: center;
+        text-align: left;
+    }
+}
+
+.cert-info {
+    flex: 1;
+}
+
+.cert-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.cert-issuer {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+
+.cert-date {
+    color: var(--gray-400);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.cert-description {
+    color: var(--gray-400);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.cert-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.cert-skill {
+    background: rgba(99, 102, 241, 0.2);
+    color: var(--primary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.cert-verification {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certification-card {
+        padding: 2rem;
+    }
+    
+    .cert-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .cert-logo {
+        margin-bottom: 1rem;
+    }
+}
+
         @media (min-width: 769px) {
-  .menu-toggle {
-    display: none; /* Hide on desktop */
-  }
+            .menu-toggle {
+            display: none; /* Hide on desktop */
+        }
+        }
+
+        .menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: var(--white);
+        transition: all 0.3s ease;
+        }
+
+
+        /*Call to Action*/
+
+        .cta-section {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
 }
 
-.menu-toggle span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background: var(--white);
-  transition: all 0.3s ease;
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
 }
 
-        
+.cta-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-text h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.cta-text p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.cta-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cta-highlight {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.cta-highlight i {
+    color: var(--success);
+    font-size: 1.2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn-large {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+    min-width: 200px;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .cta-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .cta-text h2 {
+        font-size: 2.2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+        /* Achievements Section */
+.achievements {
+    background: linear-gradient(135deg, var(--dark-light) 0%, var(--gray-900) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.achievements::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.achievement-card {
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+}
+
+.achievement-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 25px 50px rgba(99, 102, 241, 0.3);
+}
+
+.achievement-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--white);
+    margin: 0 auto 2rem;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4);
+}
+
+.achievement-icon::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: pulse-ring 3s infinite;
+    z-index: -1;
+}
+
+@keyframes pulse-ring {
+    0%, 100% { transform: scale(1); opacity: 0.2; }
+    50% { transform: scale(1.1); opacity: 0.1; }
+}
+
+.achievement-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.achievement-metric {
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.achievement-description {
+    color: var(--gray-400);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Key Metrics Row */
+.metrics-row {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.metric-item {
+    text-align: center;
+    padding: 2rem;
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    min-width: 180px;
+    transition: all 0.3s ease;
+}
+
+.metric-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.metric-number {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.metric-label {
+    color: var(--gray-400);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .achievement-card {
+        padding: 2.5rem 2rem;
+    }
+    
+    .achievement-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    
+    .metrics-row {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .metric-item {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .metric-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .achievement-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .achievement-title {
+        font-size: 1.2rem;
+    }
+}
 
         /* Hero Section */
         .hero {
@@ -496,6 +946,167 @@
             color: var(--gray-400);
             font-weight: 500;
         }
+
+        /* Technical Expertise Section */
+.technical-expertise {
+    background: var(--dark);
+    padding: 8rem 0;
+}
+
+.skills-proficiency {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 4rem;
+    margin-bottom: 5rem;
+}
+
+.skill-category {
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: 20px;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.skills-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skill-bar {
+    margin-bottom: 1rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.skill-name {
+    font-weight: 600;
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.skill-percentage {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 0.9rem;
+}
+
+.skill-progress {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 10px;
+    transition: width 2s ease-in-out;
+    position: relative;
+}
+
+.skill-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-30px); }
+    100% { transform: translateX(100%); }
+}
+
+/* Competencies Grid */
+.competencies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.competency-card {
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.competency-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.competency-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--white);
+    margin: 0 auto 1.5rem;
+}
+
+.competency-card h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.competency-card p {
+    color: var(--gray-400);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .skills-proficiency {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .skill-category {
+        padding: 2rem;
+    }
+    
+    .competencies-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .competency-card {
+        padding: 2rem;
+    }
+}
 
         /* Skills Section */
         .skills-grid {
@@ -965,260 +1576,260 @@
         }
 
         /* ===================== */
-/* Enhanced Mobile Styles */
-/* ===================== */
+        /* Enhanced Mobile Styles */
+        /* ===================== */
 
-@media (max-width: 768px) {
-  /* Base Layout Adjustments */
-  body {
-    font-size: 15px;
-  }
-  
-  .container {
-    padding: 0 1.5rem;
-  }
-  
-  section {
-    padding: 4rem 0;
-  }
+        @media (max-width: 768px) {
+        /* Base Layout Adjustments */
+        body {
+            font-size: 15px;
+        }
+        
+        .container {
+            padding: 0 1.5rem;
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
 
-  /* Improved Navigation */
-  .navbar {
-    padding: 0.8rem 0;
-    height: 70px;
-  }
-  
-  .nav-menu {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    height: calc(100vh - 70px);
-    background: var(--glass-dark);
-    flex-direction: column;
-    padding: 2rem;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    z-index: 998;
-    overflow-y: auto;
-  }
-  
-  .nav-menu.active {
-    transform: translateX(0);
-  }
-  
-  .nav-menu li {
-    margin: 1rem 0;
-  }
-  
-  .nav-link {
-    font-size: 1.1rem;
-    padding: 0.8rem 0;
-    display: block;
-  }
+        /* Improved Navigation */
+        .navbar {
+            padding: 0.8rem 0;
+            height: 70px;
+        }
+        
+        .nav-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            height: calc(100vh - 70px);
+            background: var(--glass-dark);
+            flex-direction: column;
+            padding: 2rem;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 998;
+            overflow-y: auto;
+        }
+        
+        .nav-menu.active {
+            transform: translateX(0);
+        }
+        
+        .nav-menu li {
+            margin: 1rem 0;
+        }
+        
+        .nav-link {
+            font-size: 1.1rem;
+            padding: 0.8rem 0;
+            display: block;
+        }
 
-  /* Hero Section */
-  .hero {
-    padding-top: 70px;
-    min-height: auto;
-    padding-bottom: 3rem;
-  }
-  
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    text-align: center;
-  }
-  
-  .hero-content h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.3rem;
-  }
-  
-  .hero-description {
-    font-size: 1rem;
-    margin: 0 auto 2rem;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .avatar-container {
-    width: 280px;
-    height: 280px;
-    margin: 0 auto;
-  }
-  
-  .hero-stats {
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
+        /* Hero Section */
+        .hero {
+            padding-top: 70px;
+            min-height: auto;
+            padding-bottom: 3rem;
+        }
+        
+        .hero-container {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            text-align: center;
+        }
+        
+        .hero-content h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+        }
+        
+        .hero-description {
+            font-size: 1rem;
+            margin: 0 auto 2rem;
+        }
+        
+        .hero-buttons {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .btn {
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .avatar-container {
+            width: 280px;
+            height: 280px;
+            margin: 0 auto;
+        }
+        
+        .hero-stats {
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
 
-  /* Section Headers */
-  .section-header {
-    margin-bottom: 3rem;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-  
-  .section-subtitle {
-    font-size: 1rem;
-  }
+        /* Section Headers */
+        .section-header {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+        
+        .section-subtitle {
+            font-size: 1rem;
+        }
 
-  /* About Section */
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  
-  .about-highlights {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
+        /* About Section */
+        .about-grid {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+        
+        .about-highlights {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
 
-  /* Skills Section */
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .skill-card {
-    padding: 1.5rem;
-  }
+        /* Skills Section */
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .skill-card {
+            padding: 1.5rem;
+        }
 
-  /* Projects Section */
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .project-card {
-    max-width: 100%;
-  }
-  
-  .project-image {
-    height: 200px;
-  }
-  
-  .project-content {
-    padding: 1.5rem;
-  }
-  
-  .project-links {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .project-link {
-    width: 100%;
-    justify-content: center;
-  }
+        /* Projects Section */
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .project-card {
+            max-width: 100%;
+        }
+        
+        .project-image {
+            height: 200px;
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-links {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .project-link {
+            width: 100%;
+            justify-content: center;
+        }
 
-  /* Experience Timeline */
-  .timeline::before {
-    left: 20px;
-  }
-  
-  .timeline-item:nth-child(odd) .timeline-content,
-  .timeline-item:nth-child(even) .timeline-content {
-    margin-left: 60px;
-    margin-right: 0;
-  }
-  
-  .timeline-dot {
-    left: 20px;
-  }
-  
-  .timeline-content {
-    padding: 1.5rem;
-  }
-}
+        /* Experience Timeline */
+        .timeline::before {
+            left: 20px;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content,
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 60px;
+            margin-right: 0;
+        }
+        
+        .timeline-dot {
+            left: 20px;
+        }
+        
+        .timeline-content {
+            padding: 1.5rem;
+        }
+    }
 
-  /* Add this to your existing CSS */
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .contact-info {
-    width: 100%;
-    margin: 0;
-    padding: 2rem 1.5rem;
-    border-radius: 0;
-    box-sizing: border-box;
-  }
-  
-  .contact-form {
-    width: 100%;
-    padding: 2rem 1.5rem;
-    margin: 0;
-    border-radius: 0;
-  }
-  
-  .contact-item {
-    padding: 1rem;
-  }
-  
-  .contact-title {
-    font-size: 1.8rem;
-  }
-}
+        /* Add this to your existing CSS */
+        @media (max-width: 768px) {
+        .contact-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        .contact-info {
+            width: 100%;
+            margin: 0;
+            padding: 2rem 1.5rem;
+            border-radius: 0;
+            box-sizing: border-box;
+        }
+        
+        .contact-form {
+            width: 100%;
+            padding: 2rem 1.5rem;
+            margin: 0;
+            border-radius: 0;
+        }
+        
+        .contact-item {
+            padding: 1rem;
+        }
+        
+        .contact-title {
+            font-size: 1.8rem;
+        }
+    }
 
-/* For very small screens */
-@media (max-width: 480px) {
-  .contact-info, 
-  .contact-form {
-    padding: 1.5rem 1rem;
-  }
-  
-  .contact-item {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .contact-icon {
-    margin-bottom: 1rem;
-  }
-}
+        /* For very small screens */
+        @media (max-width: 480px) {
+        .contact-info, 
+        .contact-form {
+            padding: 1.5rem 1rem;
+        }
+        
+        .contact-item {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .contact-icon {
+            margin-bottom: 1rem;
+        }
+    }
 
-/* Extra Small Devices (below 480px) */
-@media (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .avatar-container {
-    width: 240px;
-    height: 240px;
-  }
-  
-  .section-title {
-    font-size: 1.8rem;
-  }
-  
-  .highlight-card,
-  .skill-card {
-    padding: 1.2rem;
-  }
-}
+        /* Extra Small Devices (below 480px) */
+        @media (max-width: 480px) {
+        .hero-content h1 {
+            font-size: 2rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.1rem;
+        }
+        
+        .avatar-container {
+            width: 240px;
+            height: 240px;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+        }
+        
+        .highlight-card,
+        .skill-card {
+            padding: 1.2rem;
+        }
+    }
     </style>
 </head>
 <body>
@@ -1227,13 +1838,16 @@
         <div class="nav-container">
             <div class="logo">Ahmed Iqbal</div>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+    <li><a href="#home" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#skills" class="nav-link">Skills</a></li>
+    <li><a href="#technical-expertise" class="nav-link">Expertise</a></li>
+    <li><a href="#projects" class="nav-link">Projects</a></li>
+    <li><a href="#achievements" class="nav-link">Achievements</a></li>
+    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+    <li><a href="#experience" class="nav-link">Experience</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+</ul>
             <div class="menu-toggle" id="menu-toggle">
                 <span></span>
                 <span></span>
@@ -1279,6 +1893,10 @@
                         <div class="stat-number">4+</div>
                         <div class="stat-label">Certifications</div>
                     </div>
+                    <div class="stat">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Satisfied Clients</div>
+                    </div>
                 </div>
             </div>
             <div class="hero-image">
@@ -1306,16 +1924,19 @@
             </div>
             <div class="about-grid">
                 <div class="about-content">
-                    <p>
-                        I'm Ahmed Iqbal, an aspiring Data Scientist, Data Analyst, and AI Engineer with a strong academic foundation in Software Engineering. My journey in data science began with a curiosity about how data can tell stories and drive meaningful decisions.
-                    </p>
-                    <p>
-                        With deep expertise in Python, Machine Learning, Data Visualization, and AI model development, I specialize in transforming complex datasets into actionable insights and intelligent systems that solve real-world problems.
-                    </p>
-                    <p>
-                        Currently pursuing my Bachelor's in Software Engineering with a CGPA of 3.92 at CECOS University. I'm driven by curiosity and innovation, constantly learning new technologies and seeking opportunities to contribute to AI-first organizations and research-driven platforms.
-                    </p>
-                </div>
+    <p>
+        I'm Ahmed Iqbal, a passionate Data Scientist, Data Analyst, and AI Engineer with a strong academic foundation in Software Engineering (CGPA: 3.92). My journey in data science began with a curiosity about how data can tell stories and drive meaningful business decisions.
+    </p>
+    <p>
+        <strong>What sets me apart:</strong> With hands-on experience in Python, Machine Learning, Deep Learning, and advanced data analytics, I specialize in transforming complex datasets into actionable insights. I have a proven track record of delivering high-impact projects, including recommendation systems, classification models with 100% accuracy, and AI-driven analytics solutions.
+    </p>
+    <p>
+        <strong>Professional Impact:</strong> During my tenure at Cognifyz Technology, I collaborated with cross-functional teams to deliver data-driven solutions that improved business decision-making. I have successfully completed 5+ projects, earned 4+ professional certifications from IBM, and maintained a 100% client satisfaction rate.
+    </p>
+    <p>
+        <strong>Current Focus:</strong> I'm actively pursuing advanced research in AI-human text detection and developing innovative solutions for content authenticity verification. My goal is to contribute to AI-first organizations and research-driven platforms that are shaping the future of technology.
+    </p>
+</div>
                 <div class="about-highlights">
                     <div class="highlight-card fade-up">
                         <div class="highlight-icon">
@@ -1458,6 +2079,190 @@
         </div>
     </section>
 
+
+    <!-- Technical Expertise Section (Add after Skills section) -->
+<section id="technical-expertise" class="technical-expertise">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-badge">Technical Proficiency</div>
+            <h2 class="section-title">Core Technical Skills</h2>
+            <p class="section-subtitle">Proficiency levels in key technologies and tools</p>
+        </div>
+        
+        <div class="skills-proficiency">
+            <div class="skill-category">
+                <h3 class="category-title">Programming Languages</h3>
+                <div class="skills-bars">
+                    <div class="skill-bar fade-up">
+                        <div class="skill-info">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar fade-up">
+                        <div class="skill-info">
+                            <span class="skill-name">SQL</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar fade-up">
+                        <div class="skill-info">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar fade-up">
+                        <div class="skill-info">
+                            <span class="skill-name">HTML/CSS</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3 class="category-title">Data Science & ML</h3>
+                <div class="skills-bars">
+                    <div class="skill-bar fade-up">
+                        <div class="skill-info">
+                            <span class="skill-name">Pandas & NumPy</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar fade-up">
+                        <div class="skill-info">
+                            <span class="skill-name">Scikit-learn</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar fade-up">
+                        <div class="skill-info">
+                            <span class="skill-name">TensorFlow</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar fade-up">
+                        <div class="skill-info">
+                            <span class="skill-name">Data Visualization</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3 class="category-title">Tools & Technologies</h3>
+                <div class="skills-bars">
+                    <div class="skill-bar fade-up">
+                        <div class="skill-info">
+                            <span class="skill-name">Git & GitHub</span>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar fade-up">
+                        <div class="skill-info">
+                            <span class="skill-name">Streamlit</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar fade-up">
+                        <div class="skill-info">
+                            <span class="skill-name">Anaconda</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar fade-up">
+                        <div class="skill-info">
+                            <span class="skill-name">Flask</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Key Competencies -->
+        <div class="competencies-grid">
+            <div class="competency-card fade-up">
+                <div class="competency-icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <h4>Problem Solving</h4>
+                <p>Breaking down complex problems into manageable solutions</p>
+            </div>
+            
+            <div class="competency-card fade-up">
+                <div class="competency-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h4>Team Collaboration</h4>
+                <p>Effective communication and teamwork in agile environments</p>
+            </div>
+            
+            <div class="competency-card fade-up">
+                <div class="competency-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h4>Innovation</h4>
+                <p>Creative approaches to data science challenges</p>
+            </div>
+            
+            <div class="competency-card fade-up">
+                <div class="competency-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h4>Fast Learning</h4>
+                <p>Quick adaptation to new technologies and methodologies</p>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
@@ -1596,6 +2401,257 @@
         </div>
     </section>
 
+    <!-- Achievements Section -->
+<section id="achievements" class="achievements">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-badge">Recognition</div>
+            <h2 class="section-title">Key Achievements</h2>
+            <p class="section-subtitle">Highlighting notable accomplishments and milestones in my academic and professional journey</p>
+        </div>
+        
+        <div class="achievements-grid">
+            <div class="achievement-card fade-up">
+                <div class="achievement-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3 class="achievement-title">Outstanding Academic Performance</h3>
+                <div class="achievement-metric">CGPA: 3.92/4.0</div>
+                <p class="achievement-description">
+                    Maintained exceptional academic excellence throughout Software Engineering program, ranking in top 5% of the class with consistent high performance.
+                </p>
+            </div>
+            
+            <div class="achievement-card fade-up">
+                <div class="achievement-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3 class="achievement-title">100% Project Success Rate</h3>
+                <div class="achievement-metric">5+ Completed Projects</div>
+                <p class="achievement-description">
+                    Successfully delivered all data science and machine learning projects on time with high accuracy rates, including 100% spam detection accuracy.
+                </p>
+            </div>
+            
+            <div class="achievement-card fade-up">
+                <div class="achievement-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3 class="achievement-title">Professional Certifications</h3>
+                <div class="achievement-metric">4+ IBM Certifications</div>
+                <p class="achievement-description">
+                    Earned multiple professional certifications from IBM in Python, Data Analysis, Machine Learning, and SQL, validating technical expertise.
+                </p>
+            </div>
+            
+            <div class="achievement-card fade-up">
+                <div class="achievement-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3 class="achievement-title">Client Satisfaction</h3>
+                <div class="achievement-metric">5+ Satisfied Clients</div>
+                <p class="achievement-description">
+                    Delivered high-quality AI and data science solutions to clients, maintaining 100% client satisfaction rate across all projects.
+                </p>
+            </div>
+            
+            <div class="achievement-card fade-up">
+                <div class="achievement-icon">
+                    <i class="fas fa-users-cog"></i>
+                </div>
+                <h3 class="achievement-title">Team Leadership</h3>
+                <div class="achievement-metric">Led 5-Member Team</div>
+                <p class="achievement-description">
+                    Successfully collaborated and contributed to team-based projects at Cognifyz Technology, demonstrating leadership and teamwork skills.
+                </p>
+            </div>
+            
+            <div class="achievement-card fade-up">
+                <div class="achievement-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3 class="achievement-title">Rapid Skill Development</h3>
+                <div class="achievement-metric">2+ Years Experience</div>
+                <p class="achievement-description">
+                    Accelerated learning curve in data science and AI, acquiring advanced skills and practical experience in just 2 years of focused study.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Key Metrics -->
+        <div class="metrics-row">
+            <div class="metric-item fade-up">
+                <div class="metric-number">100%</div>
+                <div class="metric-label">Project Success Rate</div>
+            </div>
+            <div class="metric-item fade-up">
+                <div class="metric-number">95%+</div>
+                <div class="metric-label">Average Model Accuracy</div>
+            </div>
+            <div class="metric-item fade-up">
+                <div class="metric-number">5+</div>
+                <div class="metric-label">Technologies Mastered</div>
+            </div>
+            <div class="metric-item fade-up">
+                <div class="metric-number">2+</div>
+                <div class="metric-label">Years of Experience</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Certifications Section -->
+<section id="certifications" class="certifications">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-badge">Professional Development</div>
+            <h2 class="section-title">Certifications & Achievements</h2>
+            <p class="section-subtitle">Recognized credentials that validate my expertise in data science and AI technologies</p>
+        </div>
+        <div class="certifications-grid">
+            <div class="certification-card fade-up">
+                <div class="cert-header">
+                    <div class="cert-logo">
+                        <img src="ibmlogo.png" alt="IBM Logo" style="width: 40px; height: 40px; object-fit: contain;">
+                    </div>
+                    <div class="cert-info">
+                        <h3 class="cert-title">IBM Data Science Professional Certificate</h3>
+                        <div class="cert-issuer">IBM via Coursera</div>
+                        <div class="cert-date">2025</div>
+                    </div>
+                </div>
+                <p class="cert-description">Comprehensive certification covering Python fundamentals, data structures, and libraries essential for data science and AI development.</p>
+                <div class="cert-skills">
+                    <span class="cert-skill">Python Programming</span>
+                    <span class="cert-skill">Data Structures</span>
+                    <span class="cert-skill">APIs</span>
+                    <span class="cert-skill">ML</span>
+                    <span class="cert-skill">DL</span>
+                </div>
+
+                <div class="project-links" style="padding-top: 10%;">
+                            <a href="https://www.coursera.org/account/accomplishments/professional-cert/QQLV1LFIZJK1" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Verify Certificate
+                            </a>
+                        </div>
+
+            </div>
+
+            <div class="certification-card fade-up">
+                <div class="cert-header">
+                    <div class="cert-logo">
+                        <img src="google.jpg" alt="IBM Logo" style="width: 40px; height: 40px; object-fit: contain;">
+                    </div>
+                    <div class="cert-info">
+                        <h3 class="cert-title">Google Advanced Data Analytics</h3>
+                        <div class="cert-issuer">Google via Coursera</div>
+                        <div class="cert-date">2025</div>
+                    </div>
+
+                </div>
+                <p class="cert-description">Advanced certification in data manipulation, analysis, and visualization using Python libraries like Pandas, NumPy, and Matplotlib.</p>
+                <div class="cert-skills">
+                    <span class="cert-skill">Pandas</span>
+                    <span class="cert-skill">NumPy</span>
+                    <span class="cert-skill">Data Visualization</span>
+                    <span class="cert-skill">EDA</span>
+                </div>
+
+                <div class="project-links" style="padding-top: 10%;">
+                            <a href="https://www.coursera.org/account/accomplishments/professional-cert/X6E9OBDXHA2N" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Verify Certificate
+                            </a>
+                        </div>
+
+            </div>
+
+            <div class="certification-card fade-up">
+                <div class="cert-header">
+                    <div class="cert-logo">
+                        <img src="ibmlogo.png" alt="IBM Logo" style="width: 40px; height: 40px; object-fit: contain;">
+                    </div>
+                    <div class="cert-info">
+                        <h3 class="cert-title">IBM Data Analyst Professional Certificate</h3>
+                        <div class="cert-issuer">IBM via Coursera</div>
+                        <div class="cert-date">2025</div>
+                    </div>
+                </div>
+                <p class="cert-description">Comprehensive machine learning certification covering supervised and unsupervised learning algorithms with practical implementation.</p>
+                <div class="cert-skills">
+                    <span class="cert-skill">Scikit-learn</span>
+                    <span class="cert-skill">ML Algorithms</span>
+                    <span class="cert-skill">Model Evaluation</span>
+                </div>
+
+                <div class="project-links" style="padding-top: 10%;">
+                            <a href="https://www.coursera.org/account/accomplishments/professional-cert/S3GSXVGJR8N3" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Verify Certificate
+                            </a>
+                        </div>
+            </div>
+
+            <div class="certification-card fade-up">
+                <div class="cert-header">
+                    <div class="cert-logo">
+                        <img src="ibmlogo.png" alt="IBM Logo" style="width: 40px; height: 40px; object-fit: contain;">
+                    </div>
+                    <div class="cert-info">
+                        <h3 class="cert-title">Databases and SQL for Data Science</h3>
+                        <div class="cert-issuer">IBM via Coursera</div>
+                        <div class="cert-date">2025</div>
+                    </div>
+                </div>
+                <p class="cert-description">Specialized certification in database management, SQL querying, and data extraction techniques for data science applications.</p>
+                <div class="cert-skills">
+                    <span class="cert-skill">SQL</span>
+                    <span class="cert-skill">Database Design</span>
+                    <span class="cert-skill">Data Extraction</span>
+                </div>
+                <div class="project-links" style="padding-top: 10%;">
+                            <a href="https://www.coursera.org/account/accomplishments/verify/G9CXVTB6ZC94" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Verify Certificate
+                            </a>
+                        </div>
+            </div>
+
+            <div class="certification-card fade-up">
+                <div class="cert-header">
+                    <div class="cert-logo">
+                        <img src="stanford.png" alt="IBM Logo" style="width: 40px; height: 40px; object-fit: contain;">
+                    </div>
+                    <div class="cert-info">
+                        <h3 class="cert-title">Machine Learning by Stanford & DeepLearning AI</h3>
+                        <div class="cert-issuer">Stanford via Coursera</div>
+                        <div class="cert-date">2025</div>
+                    </div>
+                </div>
+                <p class="cert-description">Specialized in supervised ML algorithms. Learn to increse the accuracy of model adn fine tuning.</p>
+                <div class="cert-skills">
+                    <span class="cert-skill">Supervised ML</span>
+                    <span class="cert-skill">Algorithms</span>
+                    <span class="cert-skill">Fine Tuning</span>
+                </div>
+                <div class="project-links" style="padding-top: 10%;">
+                            <a href="https://www.coursera.org/account/accomplishments/verify/FODF5F8BWWF5" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Verify Certificate
+                            </a>
+                        </div>
+            </div>
+
+        </div>
+        
+        <div class="cert-verification">
+            <a href="https://www.credly.com/users/ahmed-iqbal.f9fae12e/badges#credly" 
+               class="btn btn-outline" 
+               target="_blank">
+                <i class="fas fa-external-link-alt"></i>
+                Verify Certifications on Credly
+            </a>
+        </div>
+    </div>
+</section>
+
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
@@ -1673,6 +2729,42 @@
             </div>
         </div>
     </section>
+
+    <!-- Call to Action Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <div class="cta-text">
+                <h2>Ready to Transform Your Data into Insights?</h2>
+                <p>Let's collaborate on your next data science project. I bring proven expertise, innovative solutions, and a commitment to delivering results that drive business growth.</p>
+                <div class="cta-highlights">
+                    <div class="cta-highlight">
+                        <i class="fas fa-check-circle"></i>
+                        <span>100% Project Success Rate</span>
+                    </div>
+                    <div class="cta-highlight">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Advanced AI & ML Expertise</span>
+                    </div>
+                    <div class="cta-highlight">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Proven Track Record</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary btn-large">
+                    <i class="fas fa-rocket"></i>
+                    Start a Project
+                </a>
+                <a href="mailto:ahmedkhanswati82@gmail.com" class="btn btn-outline btn-large">
+                    <i class="fas fa-envelope"></i>
+                    Send Email
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">

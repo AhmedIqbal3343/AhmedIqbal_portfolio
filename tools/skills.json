@@ -1,0 +1,785 @@
+{
+  "_about": "Single source of truth for the skills slider and the skills inventory. Edit this file, then run: python3 tools/build_skills.py",
+  "levels": {
+    "pro": "Used in professional work",
+    "proj": "Used in projects",
+    "used": "Used, no public project here yet"
+  },
+  "categories": [
+    {
+      "id": "ml",
+      "name": "AI, ML & deep learning",
+      "blurb": "Training, fine-tuning and evaluating models."
+    },
+    {
+      "id": "llm",
+      "name": "LLM engineering & agentic AI",
+      "blurb": "Agents, retrieval and the checks around them."
+    },
+    {
+      "id": "data",
+      "name": "Data, retrieval & storage",
+      "blurb": "Getting messy data into shape and finding it again."
+    },
+    {
+      "id": "backend",
+      "name": "Backend & APIs",
+      "blurb": "Serving models and wiring systems together."
+    },
+    {
+      "id": "web",
+      "name": "Frontend & web platforms",
+      "blurb": "Interfaces and the sites agents build."
+    },
+    {
+      "id": "ops",
+      "name": "Automation & infrastructure",
+      "blurb": "Workflows, delivery and the tools around them."
+    }
+  ],
+  "projects": {
+    "web": {
+      "title": "Agent systems for web development",
+      "href": "#case-agent-web",
+      "note": "DX Creativ"
+    },
+    "ads": {
+      "title": "Google Ads automation agent",
+      "href": "#case-ads-agent",
+      "note": "DX Creativ"
+    },
+    "doc": {
+      "title": "Document RAG & LangGraph workflows",
+      "href": "#case-doc-rag",
+      "note": "Arfa Kareem"
+    },
+    "ag": {
+      "title": "AcademicGuard",
+      "href": "#case-academicguard",
+      "note": "Final-year project"
+    },
+    "yt": {
+      "title": "YouTube Knowledge Assistant",
+      "href": "#case-youtube-rag",
+      "note": "Project"
+    },
+    "cm": {
+      "title": "ClassMate AI",
+      "href": "#case-classmate",
+      "note": "Project"
+    },
+    "bo": {
+      "title": "BatteryOnline",
+      "href": "#case-batteryonline",
+      "note": "Live store"
+    },
+    "qjs": {
+      "title": "QuickJumpStart",
+      "href": "https://quickjumpstart.ae/",
+      "note": "Live site"
+    },
+    "gpp": {
+      "title": "GlanPawsPets",
+      "href": "https://glanpawspets.com/",
+      "note": "Live site"
+    },
+    "cog": {
+      "title": "Cognifyz Technologies",
+      "href": "#experience",
+      "note": "Internship"
+    },
+    "arfa": {
+      "title": "Arfa Kareem Technologies",
+      "href": "#experience",
+      "note": "Internship"
+    },
+    "pharma": {
+      "title": "Pharma Clinical Decision Support",
+      "href": "#archive",
+      "note": "Earlier project"
+    },
+    "coach": {
+      "title": "AI Running Coach Assistant",
+      "href": "#archive",
+      "note": "Earlier project"
+    },
+    "scholar": {
+      "title": "Scholarlyte study assistant",
+      "href": "#archive",
+      "note": "Earlier project"
+    },
+    "medi": {
+      "title": "MediMind health assistant",
+      "href": "#archive",
+      "note": "Earlier project"
+    },
+    "video": {
+      "title": "Video stabiliser & photo enhancer",
+      "href": "#archive",
+      "note": "Earlier project"
+    },
+    "sales": {
+      "title": "Multi-brand sales aggregator",
+      "href": "#archive",
+      "note": "Earlier project"
+    },
+    "movie": {
+      "title": "Movie recommender",
+      "href": "#archive",
+      "note": "Earlier project"
+    },
+    "spam": {
+      "title": "SMS / email spam classifier",
+      "href": "#archive",
+      "note": "Earlier project"
+    },
+    "ghprof": {
+      "title": "GitHub profile",
+      "href": "https://github.com/AhmedIqbal3343",
+      "note": "@AhmedIqbal3343"
+    }
+  },
+  "skills": [
+    {
+      "id": "python",
+      "name": "Python",
+      "cat": "ml",
+      "level": "pro",
+      "icon": "python",
+      "color": "#3776AB",
+      "dark": "#6FA8DC",
+      "row": 1,
+      "used": [
+        "doc",
+        "ag",
+        "yt",
+        "web"
+      ]
+    },
+    {
+      "id": "numpy",
+      "name": "NumPy",
+      "cat": "ml",
+      "level": "pro",
+      "icon": "numpy",
+      "color": "#013243",
+      "dark": "#4DABCF",
+      "row": 1,
+      "used": [
+        "cog",
+        "arfa"
+      ]
+    },
+    {
+      "id": "pandas",
+      "name": "Pandas",
+      "cat": "ml",
+      "level": "pro",
+      "icon": "pandas",
+      "color": "#150458",
+      "dark": "#B3A6FF",
+      "row": 1,
+      "used": [
+        "cog",
+        "arfa",
+        "coach"
+      ]
+    },
+    {
+      "id": "sklearn",
+      "name": "Scikit-learn",
+      "cat": "ml",
+      "level": "pro",
+      "icon": "scikitlearn",
+      "color": "#F7931E",
+      "dark": "#F7931E",
+      "row": 1,
+      "used": [
+        "cog",
+        "coach",
+        "movie",
+        "spam"
+      ]
+    },
+    {
+      "id": "pytorch",
+      "name": "PyTorch",
+      "cat": "ml",
+      "level": "proj",
+      "icon": "pytorch",
+      "color": "#EE4C2C",
+      "dark": "#F26B50",
+      "row": 1,
+      "used": [
+        "ag"
+      ]
+    },
+    {
+      "id": "tf",
+      "name": "TensorFlow",
+      "cat": "ml",
+      "level": "proj",
+      "icon": "tensorflow",
+      "color": "#FF6F00",
+      "dark": "#FF8F33",
+      "row": 1,
+      "used": [
+        "ag"
+      ]
+    },
+    {
+      "id": "hf",
+      "name": "Hugging Face Transformers",
+      "short": "Hugging Face",
+      "cat": "ml",
+      "level": "proj",
+      "icon": "huggingface",
+      "color": "#E5A800",
+      "dark": "#FFD21E",
+      "row": 1,
+      "used": [
+        "ag"
+      ]
+    },
+    {
+      "id": "finetune",
+      "name": "Fine-tuning",
+      "cat": "ml",
+      "level": "proj",
+      "used": [
+        "ag"
+      ]
+    },
+    {
+      "id": "textclf",
+      "name": "Text classification",
+      "cat": "ml",
+      "level": "proj",
+      "used": [
+        "ag",
+        "spam"
+      ]
+    },
+    {
+      "id": "modeleval",
+      "name": "Model evaluation (precision, recall, held-out splits)",
+      "cat": "ml",
+      "level": "pro",
+      "used": [
+        "cog",
+        "arfa",
+        "ag"
+      ]
+    },
+    {
+      "id": "opencv",
+      "name": "OpenCV",
+      "cat": "ml",
+      "level": "proj",
+      "icon": "opencv",
+      "color": "#5C3EE8",
+      "dark": "#8C78F0",
+      "row": 1,
+      "used": [
+        "video"
+      ]
+    },
+    {
+      "id": "jupyter",
+      "name": "Jupyter",
+      "cat": "ml",
+      "level": "used",
+      "icon": "jupyter",
+      "color": "#F37626",
+      "dark": "#F58E4F",
+      "row": 1,
+      "used": [],
+      "docs": "https://docs.jupyter.org/"
+    },
+    {
+      "id": "agents",
+      "name": "LLM agents & tool orchestration",
+      "cat": "llm",
+      "level": "pro",
+      "used": [
+        "web",
+        "ads",
+        "doc",
+        "cm"
+      ]
+    },
+    {
+      "id": "langchain",
+      "name": "LangChain",
+      "cat": "llm",
+      "level": "pro",
+      "icon": "langchain",
+      "color": "#1C3C3C",
+      "dark": "#7FC8B1",
+      "row": 1,
+      "used": [
+        "doc",
+        "yt",
+        "cm",
+        "pharma"
+      ]
+    },
+    {
+      "id": "langgraph",
+      "name": "LangGraph",
+      "cat": "llm",
+      "level": "pro",
+      "icon": "langgraph",
+      "color": "#1C3C3C",
+      "dark": "#7FC8B1",
+      "row": 1,
+      "used": [
+        "cm",
+        "doc",
+        "scholar"
+      ]
+    },
+    {
+      "id": "rag",
+      "name": "Retrieval-augmented generation",
+      "cat": "llm",
+      "level": "pro",
+      "used": [
+        "doc",
+        "yt",
+        "medi"
+      ]
+    },
+    {
+      "id": "prompt",
+      "name": "Prompt design",
+      "cat": "llm",
+      "level": "pro",
+      "used": [
+        "web",
+        "ads"
+      ]
+    },
+    {
+      "id": "eval",
+      "name": "LLM output evaluation",
+      "cat": "llm",
+      "level": "pro",
+      "used": [
+        "web",
+        "yt",
+        "ag"
+      ]
+    },
+    {
+      "id": "hitl",
+      "name": "Human-in-the-loop design",
+      "cat": "llm",
+      "level": "proj",
+      "used": [
+        "cm"
+      ]
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI API",
+      "short": "OpenAI",
+      "cat": "llm",
+      "level": "proj",
+      "mono": "OpenAI",
+      "color": "#10A37F",
+      "dark": "#3CC69E",
+      "used": [
+        "yt",
+        "medi",
+        "scholar"
+      ]
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini API",
+      "short": "Gemini",
+      "cat": "llm",
+      "level": "proj",
+      "icon": "googlegemini",
+      "color": "#8E75B2",
+      "dark": "#B39DDB",
+      "row": 1,
+      "used": [
+        "cm"
+      ]
+    },
+    {
+      "id": "groq",
+      "name": "Groq API",
+      "short": "Groq",
+      "cat": "llm",
+      "level": "proj",
+      "mono": "groq",
+      "color": "#F55036",
+      "dark": "#F7765F",
+      "used": [
+        "cm"
+      ]
+    },
+    {
+      "id": "embeddings",
+      "name": "Embeddings & semantic search",
+      "cat": "data",
+      "level": "pro",
+      "used": [
+        "doc",
+        "yt"
+      ]
+    },
+    {
+      "id": "chromadb",
+      "name": "ChromaDB",
+      "cat": "data",
+      "level": "proj",
+      "mono": "Chroma",
+      "color": "#E2563B",
+      "dark": "#F07A62",
+      "used": [
+        "yt"
+      ]
+    },
+    {
+      "id": "faiss",
+      "name": "FAISS",
+      "cat": "data",
+      "level": "used",
+      "mono": "FAISS",
+      "color": "#0467DF",
+      "dark": "#5B9BF0",
+      "used": [],
+      "docs": "https://github.com/facebookresearch/faiss/wiki"
+    },
+    {
+      "id": "docparse",
+      "name": "PDF / DOCX parsing",
+      "cat": "data",
+      "level": "pro",
+      "used": [
+        "doc",
+        "ag"
+      ]
+    },
+    {
+      "id": "scraping",
+      "name": "Web scraping & data cleaning",
+      "cat": "data",
+      "level": "pro",
+      "used": [
+        "arfa",
+        "sales"
+      ]
+    },
+    {
+      "id": "scrapy",
+      "name": "Scrapy",
+      "cat": "data",
+      "level": "proj",
+      "icon": "scrapy",
+      "color": "#60A839",
+      "dark": "#7FC35A",
+      "row": 2,
+      "used": [
+        "sales"
+      ]
+    },
+    {
+      "id": "postgres",
+      "name": "PostgreSQL",
+      "cat": "data",
+      "level": "proj",
+      "icon": "postgresql",
+      "color": "#4169E1",
+      "dark": "#7B97F0",
+      "row": 2,
+      "used": [
+        "pharma"
+      ]
+    },
+    {
+      "id": "sqlite",
+      "name": "SQLite",
+      "cat": "data",
+      "level": "proj",
+      "icon": "sqlite",
+      "color": "#003B57",
+      "dark": "#5BA4D6",
+      "row": 2,
+      "used": [
+        "ag"
+      ]
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "cat": "data",
+      "level": "used",
+      "icon": "mongodb",
+      "color": "#47A248",
+      "dark": "#6CC46D",
+      "row": 2,
+      "used": [],
+      "docs": "https://www.mongodb.com/docs/"
+    },
+    {
+      "id": "mysql",
+      "name": "MySQL",
+      "cat": "data",
+      "level": "used",
+      "icon": "mysql",
+      "color": "#4479A1",
+      "dark": "#7AA6C9",
+      "row": 2,
+      "used": [],
+      "docs": "https://dev.mysql.com/doc/"
+    },
+    {
+      "id": "fastapi",
+      "name": "FastAPI",
+      "cat": "backend",
+      "level": "pro",
+      "icon": "fastapi",
+      "color": "#009688",
+      "dark": "#2BBBAD",
+      "row": 2,
+      "used": [
+        "yt",
+        "doc",
+        "cm",
+        "pharma"
+      ]
+    },
+    {
+      "id": "flask",
+      "name": "Flask",
+      "cat": "backend",
+      "level": "pro",
+      "icon": "flask",
+      "color": "#000000",
+      "dark": "#E8EEEC",
+      "row": 2,
+      "used": [
+        "ag",
+        "arfa",
+        "medi"
+      ]
+    },
+    {
+      "id": "rest",
+      "name": "REST APIs & third-party integrations",
+      "cat": "backend",
+      "level": "pro",
+      "used": [
+        "doc",
+        "cm"
+      ]
+    },
+    {
+      "id": "gapis",
+      "name": "Google Classroom & Drive APIs",
+      "short": "Google APIs",
+      "cat": "backend",
+      "level": "proj",
+      "icon": "googleclassroom",
+      "color": "#0F9D58",
+      "dark": "#3CC07F",
+      "row": 2,
+      "used": [
+        "cm"
+      ]
+    },
+    {
+      "id": "react",
+      "name": "React",
+      "cat": "web",
+      "level": "proj",
+      "icon": "react",
+      "color": "#087EA4",
+      "dark": "#61DAFB",
+      "row": 2,
+      "used": [
+        "ag",
+        "pharma",
+        "sales"
+      ]
+    },
+    {
+      "id": "js",
+      "name": "JavaScript",
+      "cat": "web",
+      "level": "proj",
+      "icon": "javascript",
+      "color": "#C9A800",
+      "dark": "#F7DF1E",
+      "row": 2,
+      "used": [
+        "ag",
+        "pharma"
+      ]
+    },
+    {
+      "id": "electron",
+      "name": "Electron",
+      "cat": "web",
+      "level": "proj",
+      "icon": "electron",
+      "color": "#47848F",
+      "dark": "#7FB5BF",
+      "row": 2,
+      "used": [
+        "pharma"
+      ]
+    },
+    {
+      "id": "streamlit",
+      "name": "Streamlit",
+      "cat": "web",
+      "level": "proj",
+      "icon": "streamlit",
+      "color": "#FF4B4B",
+      "dark": "#FF6B6B",
+      "row": 2,
+      "used": [
+        "yt",
+        "movie",
+        "spam"
+      ]
+    },
+    {
+      "id": "wp",
+      "name": "WordPress",
+      "cat": "web",
+      "level": "pro",
+      "icon": "wordpress",
+      "color": "#21759B",
+      "dark": "#5AA6CC",
+      "row": 2,
+      "used": [
+        "web",
+        "qjs",
+        "gpp"
+      ]
+    },
+    {
+      "id": "elementor",
+      "name": "Elementor",
+      "cat": "web",
+      "level": "pro",
+      "icon": "elementor",
+      "color": "#92003B",
+      "dark": "#E35E8F",
+      "row": 2,
+      "used": [
+        "web",
+        "qjs",
+        "gpp"
+      ]
+    },
+    {
+      "id": "shopify",
+      "name": "Shopify",
+      "cat": "web",
+      "level": "proj",
+      "icon": "shopify",
+      "color": "#5E8E3E",
+      "dark": "#95BF47",
+      "row": 2,
+      "used": [
+        "bo"
+      ]
+    },
+    {
+      "id": "googleads",
+      "name": "Google Ads (agent work)",
+      "short": "Google Ads",
+      "cat": "ops",
+      "level": "pro",
+      "icon": "googleads",
+      "color": "#4285F4",
+      "dark": "#7FAEF7",
+      "row": 2,
+      "used": [
+        "ads"
+      ]
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "cat": "ops",
+      "level": "used",
+      "icon": "n8n",
+      "color": "#EA4B71",
+      "dark": "#F07895",
+      "row": 2,
+      "used": [],
+      "docs": "https://docs.n8n.io/"
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "cat": "ops",
+      "level": "used",
+      "icon": "docker",
+      "color": "#2496ED",
+      "dark": "#5AB2F2",
+      "row": 2,
+      "used": [],
+      "docs": "https://docs.docker.com/"
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "cat": "ops",
+      "level": "used",
+      "icon": "cloudflare",
+      "color": "#F38020",
+      "dark": "#F69A4F",
+      "row": 2,
+      "used": [],
+      "docs": "https://developers.cloudflare.com/"
+    },
+    {
+      "id": "cloudinary",
+      "name": "Cloudinary",
+      "cat": "ops",
+      "level": "used",
+      "icon": "cloudinary",
+      "color": "#3448C5",
+      "dark": "#7D8EF0",
+      "row": 2,
+      "used": [],
+      "docs": "https://cloudinary.com/documentation"
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "cat": "ops",
+      "level": "pro",
+      "icon": "git",
+      "color": "#F05032",
+      "dark": "#F47A62",
+      "row": 2,
+      "used": [
+        "arfa"
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "cat": "ops",
+      "level": "pro",
+      "icon": "github",
+      "color": "#181717",
+      "dark": "#E8EEEC",
+      "row": 2,
+      "used": [
+        "ghprof"
+      ]
+    }
+  ]
+}

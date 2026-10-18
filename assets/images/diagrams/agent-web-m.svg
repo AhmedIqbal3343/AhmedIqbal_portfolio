@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 808" width="640" height="808" role="img" aria-label="Agent workflow that builds client websites (DX Creativ)">
+<title>Agent workflow that builds client websites (DX Creativ)</title>
+<defs>
+  <pattern id="g" width="25" height="25" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#16242a"/></pattern>
+  <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6f8489"/></marker>
+  <marker id="y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f5d04a"/></marker>
+</defs>
+<rect width="640" height="808" fill="#0b1114"/>
+<rect width="640" height="808" fill="url(#g)"/>
+<text x="20" y="44" text-anchor="start" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="16" letter-spacing="1.2" fill="#f5d04a">SYSTEM DIAGRAM · SIMPLIFIED</text>
+<text x="20" y="72" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" fill="#9fb0b3">Agent workflow that builds client websites (DX Creativ)</text>
+<rect x="20.0" y="108" width="275.0" height="96" rx="12" fill="#141f25" stroke="#2e3d43" stroke-width="1.5"/>
+<text x="157.5" y="160.2" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#e9eeec">Client brief</text>
+<rect x="20.0" y="234" width="275.0" height="96" rx="12" fill="#1b2a31" stroke="#f5d04a" stroke-width="2"/>
+<text x="157.5" y="274.0" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#e9eeec">LLM agent</text>
+<text x="157.5" y="300.4" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14.4" fill="#9fb0b3">prompts · tools</text>
+<line x1="157.5" y1="206" x2="157.5" y2="230" stroke="#6f8489" stroke-width="2" marker-end="url(#a)"/>
+<rect x="20.0" y="360" width="275.0" height="96" rx="12" fill="#141f25" stroke="#2e3d43" stroke-width="1.5"/>
+<text x="157.5" y="400.0" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#e9eeec">Generated</text>
+<text x="157.5" y="424.4" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#e9eeec">site pages</text>
+<line x1="157.5" y1="332" x2="157.5" y2="356" stroke="#6f8489" stroke-width="2" marker-end="url(#a)"/>
+<rect x="20.0" y="486" width="275.0" height="96" rx="12" fill="#141f25" stroke="#2e3d43" stroke-width="1.5"/>
+<text x="157.5" y="526.0" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#e9eeec">Output-quality</text>
+<text x="157.5" y="550.4" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#e9eeec">evaluation</text>
+<line x1="157.5" y1="458" x2="157.5" y2="482" stroke="#6f8489" stroke-width="2" marker-end="url(#a)"/>
+<rect x="20.0" y="612" width="275.0" height="96" rx="12" fill="#141f25" stroke="#2e3d43" stroke-width="1.5"/>
+<text x="157.5" y="639.8" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#e9eeec">Deploy to</text>
+<text x="157.5" y="664.2" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#e9eeec">WordPress</text>
+<text x="157.5" y="690.6" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14.4" fill="#9fb0b3">2 sites live</text>
+<line x1="157.5" y1="584" x2="157.5" y2="608" stroke="#6f8489" stroke-width="2" marker-end="url(#a)"/>
+<rect x="345.0" y="108" width="275.0" height="96" rx="12" fill="#141f25" stroke="#2e3d43" stroke-width="1.5"/>
+<text x="482.5" y="160.2" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#e9eeec">Real client use</text>
+<rect x="345.0" y="234" width="275.0" height="96" rx="12" fill="#141f25" stroke="#2e3d43" stroke-width="1.5"/>
+<text x="482.5" y="274.0" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#e9eeec">Failure modes</text>
+<text x="482.5" y="298.4" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#e9eeec">surface</text>
+<line x1="482.5" y1="206" x2="482.5" y2="230" stroke="#6f8489" stroke-width="2" marker-end="url(#a)"/>
+<rect x="345.0" y="360" width="275.0" height="96" rx="12" fill="#1b2a31" stroke="#f5d04a" stroke-width="2"/>
+<text x="482.5" y="400.0" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#e9eeec">Fix prompts &amp;</text>
+<text x="482.5" y="424.4" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" fill="#e9eeec">pipeline code</text>
+<line x1="482.5" y1="332" x2="482.5" y2="356" stroke="#6f8489" stroke-width="2" marker-end="url(#a)"/>
+<path d="M297.0 674.0 C318.5 674.0 318.5 142.0 340.0 142.0" fill="none" stroke="#6f8489" stroke-width="2" marker-end="url(#a)"/>
+<path d="M343.0 422.0 C321.5 422.0 321.5 268.0 300.0 268.0" fill="none" stroke="#f5d04a" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#y)"/>
+<rect x="14.0" y="83" width="60" height="23" fill="#0b1114"/><text x="20.0" y="98" text-anchor="start" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14" letter-spacing="1.2" fill="#8ea1a5">BUILD</text>
+<rect x="339.0" y="83" width="78" height="23" fill="#0b1114"/><text x="345.0" y="98" text-anchor="start" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14" letter-spacing="1.2" fill="#8ea1a5">IMPROVE</text>
+<text x="20" y="782" text-anchor="start" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="13" letter-spacing="1.2" fill="#8ea1a5">Stages from the résumé. Internals not shown.</text>
+</svg>

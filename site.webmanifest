@@ -1,0 +1,12 @@
+{
+  "name": "Ahmed Iqbal · AI Engineer",
+  "short_name": "Ahmed Iqbal",
+  "icons": [
+    { "src": "assets/images/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/images/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#0f171c",
+  "background_color": "#f1f3f2",
+  "display": "browser",
+  "start_url": "./"
+}

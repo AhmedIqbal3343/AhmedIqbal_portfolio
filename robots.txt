@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ahmediqbal3343.github.io/AhmedIqbal_portfolio/sitemap.xml
